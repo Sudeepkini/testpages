@@ -1,0 +1,22 @@
+---
+site_name: Testpage
+plugins:
+  - search
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: true
+      repos:
+          # There will be a navigation section with this section name
+        - section: Backstage
+          # you can define the edit uri path
+          import_url: 'https://github.com/backstage/backstage?edit_uri=/blob/master/'
+        - section: framework1
+          # you can define the edit uri path
+          import_url: 'https://github.com/sudeepkini-dh/frameworktest1?branch=main'
+        - section: framework2
+          # you can define the edit uri path
+          import_url: 'https://github.com/sudeepkini-dh/frameworktest2?branch=main&edit_uri=/blob/main/'
+theme: material
+markdown_extensions:
+- pymdownx.snippets:
+    check_paths: true
